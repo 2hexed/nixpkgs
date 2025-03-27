@@ -103,7 +103,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ xautolock ];
+    environment.systemPackages = with pkgs; [ xautolock xlockmore ];
     systemd.user.services.xautolock = {
       description = "xautolock service";
       wantedBy = [ "graphical-session.target" ];
